@@ -14,7 +14,7 @@ public class FormsSelectsServlet extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
         PrintWriter printWriter = response.getWriter();
 
-        String title = "Search";
+        String title = "FormsSelects";
         
 
         printWriter.println(" <html lang='en'> ");
