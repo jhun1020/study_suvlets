@@ -15,4 +15,16 @@ public class SurveyDatasInfor {
 
         return surveyArrayList;
     }
+
+    public static ArrayList<String> getAnswerArrayList(){
+        ArrayList<String> answerArrayList = new ArrayList<String>();
+
+        answerArrayList.add("(1) 매우 그렇다");
+        answerArrayList.add("(2) 그렇다");
+        answerArrayList.add( "(3) 보통이다");
+        answerArrayList.add( "(4) 아니다");
+        answerArrayList.add( "(5) 전혀 아니다");
+
+        return answerArrayList;
+    }
 }
