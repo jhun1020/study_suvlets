@@ -8,5 +8,46 @@
   </head>
   <body>
     <div>index.html</div>
+    <div><a href="/formsSelectsServlet">formsSelectsServlet</a></div>
+    <div>
+      <a
+        href="/helloWorldServlets?firstName=Sanghun&secondName=Oh
+      "
+        >helloWorldServlets</a
+      >
+      <!-- hashmap형태로 넘어가서 getParameter를 통해 꺼낼 수 있음 -->
+    </div>
+    <div><a href="/searchFormServlet">searchFormServlet</a></div>
+    <div><a href="/TablesBeanListServlets">TablesBeanListServlets</a></div>
+    <div><a href="/tablesBundleServlets">tablesBundleServlets</a></div>
+    <div><a href="/tablesListServlets">tablesListServlets</a></div>
+
+    <div>Form element</div>
+    <!-- #에 넣은 주소로 감 -->
+    <div>
+      <form action="#1" method="get">
+        <button>formsSelectsServlet</button>
+      </form>
+      <form action="/helloWorldServlets" method="get">
+        <!-- 초기값을 넣고 싶다면 value 사용 -->
+        <input type="text" name="firstName" id="" />
+        <input type="text" name="secondName" id="" />
+        <!-- 히든으로 넘기고 싶다면 / 히든은 거의 value가 들어감-->
+        <input type="hidden" name="hiddenParam" value="jhunlab" />
+        <button>helloWorldServlets</button>
+      </form>
+      <form action="#3" method="get">
+        <button>searchFormServlet</button>
+      </form>
+      <form action="#4" method="get">
+        <button>TablesBeanListServlets</button>
+      </form>
+      <form action="#5" method="get">
+        <button>tablesBundleServlets</button>
+      </form>
+      <form action="#6" method="get">
+        <button>tablesListServlets</button>
+      </form>
+    </div>
   </body>
 </html>
