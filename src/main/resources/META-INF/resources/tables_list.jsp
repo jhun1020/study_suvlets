@@ -1,3 +1,9 @@
+<%@ page import="java.util.HashMap, java.util.ArrayList" %>
+
+
+java.util.ArrayList
+
+<%-- import하는 코드블록 /  붙여넣고 페이지의문법에 맞게 바꿔줌, ;도 빼야함--%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,25 +20,28 @@
     <link rel="stylesheet" href="./css/commons.css" />
 </head>
 <body>
+    <%@ include file="navbar.jsp" %>
+    <% 
+    HashMap<String, String> searchForm = (HashMap<String, String>)request.getAttribute("searchForm");
+    ArrayList<String> tablesListWithString = requset.getAttribute("tablesListWithString"); 
+    %>
     <div class="container">
-        <div class="fs-3">Tables Normal</div>
+        <div class="fs-3">Tables Normal <%= searchForm.get("search_key") %></div>
         <table class="table">
             <thead>
                 <tr>
                     <th scope=>#</th>
-                    <th scope=>First</th>
-                    <th scope=>Last</th>
                     <th scope=>Handle</th>
                 </tr>
             </thead>
             <tbody>
+            <% for(int i=0; i< tablesListWithString.size(); i++){ %>
+
                 <tr>
                     <th scope=>1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td> <%= tablesListWithString.get(i) %> </td>
                 </tr>
-
+            <% } %>
             </tbody>
         </table>
     </div>

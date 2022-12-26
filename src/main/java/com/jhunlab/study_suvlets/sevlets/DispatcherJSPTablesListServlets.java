@@ -22,8 +22,9 @@ public class DispatcherJSPTablesListServlets extends HttpServlet{
         DatasInfor datasInfor = new DatasInfor();
         ArrayList<String> tablesListWithString =   datasInfor.getTablesListWithString();
         HashMap<String, String> searchForm = datasInfor.getSearchFormData();
+        request.setAttribute("tablesListWithString", tablesListWithString);
+        request.setAttribute("searchForm", searchForm);
 
-        
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/tables_list.jsp");
         requestDispatcher.forward(request, response);
 
