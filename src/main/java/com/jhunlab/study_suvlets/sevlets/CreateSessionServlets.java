@@ -45,4 +45,13 @@ public class CreateSessionServlets extends HttpServlet{
         printWriter.close();
 
     }
+
+    // 2022 12 26 doPost
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // TODO Auto-generated method stub
+        this.doGet(req, resp);
+    }
+
+
 }

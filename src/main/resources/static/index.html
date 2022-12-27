@@ -81,5 +81,21 @@
         >/session/createServlets CreateSessionServlets.java</a
       >
     </div>
+    <hr />
+    <div>
+      <a href="/session/createServlets?username=yojulab&password=1234"
+        >/session/createServlets?username=yojulab&password=1234.java</a
+      >
+    </div>
+    <div>
+      <!-- form 태그의 메소드를 get이아니라 post로 바꾸면 주소창에 안나옴  / 검사 - 네트워크탭에 있음-->
+      <form action="/session/createServlets" method="post">
+        <!-- 초기값을 넣고 싶다면 value 사용 -->
+        <input type="text" name="firstName" id="" value="yojulab" />
+        <input type="text" name="secondName" id="" value="1234" />
+        <!-- 히든으로 넘기고 싶다면 / 히든은 거의 value가 들어감-->
+        <button>/session/CreateServlets</button>
+      </form>
+    </div>
   </body>
 </html>
